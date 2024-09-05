@@ -32,7 +32,8 @@
     place-items: center;
   } 
   .header{
-  height: 20vh; ;
+  height: 20vh; 
+  color: antiquewhite;
   width: auto;
   margin-top : 40px;
   }
@@ -207,37 +208,56 @@
 }
 
 #news-box {
-    position: absolute;
-    top: 50%;
-    right: 500px;  /* Align to the right side */
-    width: 1500px;  /* Width of the news box */
-    height: 1300px; /* Adjust height as needed */
-    background-color: white;
-    border-radius: 20px;  /* Rounded corners */
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Shadow for emphasis */
-    transform: translateY(-50%);  /* Vertically center with respect to the text */
-    padding: 20px;
+  position: absolute;  /* Changed to relative for better control */
+  top: 0;
+  left: 0;
+  width: 100%;  /* Width of the news box */
+  height: 300px; /* Adjust height as needed */
+  background-color: white;
+  border-radius: 20px;  /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Shadow for emphasis */
+  padding: 20px;
+  display: flex;  /* Use flexbox to manage layout */
+  align-items: center;  /* Vertical centering */
 }
+
+.news-item {
+  min-width: 100%;  /* Each item takes up full width of the box */
+  font-size: 120px;  /* Larger text */
+  font-family: "Rubik", sans-serif;
+  color: black;
+  display: flex;
+  justify-content: center;  /* Horizontal centering */
+  align-items: center;  /* Vertical centering */
+  padding: 0;  /* Remove any padding to ensure text stays centered */
+  box-sizing: border-box;
+  height: 100%;  /* Make the news item take full height of the container */
+  text-align: left;  /* Ensure the text is centered horizontally */
+}
+
 
 .news-slider {
     display: flex;
     height: 100%;
-    animation: slide-left-right 20s infinite; /* Slowed down to 20s */
+    width: 100%; /* Ensure the slider spans the full width */
+    overflow: hidden; /* Prevent overflow from breaking the layout */
+    animation: slide-left-right 45s infinite; /* Slowed down to 20s */
 }
 
 .news-item {
-    min-width: 100%;  /* Each item takes up full width of the box */
-    font-size: 1.5rem;  /* Larger text */
-    font-family: "Rubik", sans-serif;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10px;
-    box-sizing: border-box;
-    text-align: center;
+  min-width: 100%;  /* Each item takes up full width of the box */
+  font-size: 60px;  /* Larger text */
+  font-family: "Rubik", sans-serif;
+  color: black;
+  display: flex;
+  align-items: center;  /* This ensures the text is vertically centered */
+  justify-content: center;
+  padding: 0;  /* Remove unnecessary padding */
+  box-sizing: border-box;
+  text-align: center;  /* Ensure the text is centered horizontally */
 }
+
 
 /* Keyframe animation for sliding effect */
 @keyframes slide-left-right {
